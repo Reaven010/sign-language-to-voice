@@ -7,7 +7,7 @@ os.makedirs(folder, exist_ok=True)
 cap = cv2.VideoCapture(0)
 
 count = 0
-total_photos = 100
+total_photos = 1000         
 capturing = False  
 
 print("Press 't' to start capturing, 'q' to quit.")
