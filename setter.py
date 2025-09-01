@@ -7,7 +7,7 @@ os.makedirs(folder, exist_ok=True)
 cap = cv2.VideoCapture(0)
 
 count = 0
-total_photos = 1000         
+total_photos = 1000     
 capturing = False  
 
 print("Press 't' to start capturing, 'q' to quit.")
@@ -23,7 +23,7 @@ while cap.isOpened():
     if capturing and count < total_photos:
 
         
-        img_path = os.path.join(folder, f"image_{count+1}.jpg")
+        img_path = os.path.join(folder, f"im_{count+1}.jpg")
 
         cv2.imwrite(img_path, frame)
         count += 1

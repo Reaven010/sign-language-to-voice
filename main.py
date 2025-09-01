@@ -3,6 +3,139 @@ import mediapipe as mp
 import numpy as np
 import joblib
 from collections import deque
+import base64
+import os
+from google import genai
+from google.genai import types
+import pyttsx3
+
+engine = pyttsx3.init()
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+def generate():
+    client = genai.Client(
+        api_key=os.environ.get("GOOGLE_API_KEY"),
+    )
+
+    model = "gemini-2.5-flash"
+    contents = [
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""Act as an expert English editor. I will provide you with a string of text that has no spaces and contains spelling errors. Your task is to parse this text and rewrite it as a perfectly grammatical, well-punctuated, and natural-sounding English statement."""),
+            ],
+        ),
+        types.Content(
+            role="model",
+            parts=[
+                types.Part.from_text(text="""**Defining the Task Scope**
+
+I'm currently focused on defining the parameters of this English editing task. It's clear I need to receive a string lacking spaces and filled with errors. My primary goal will be to transform this into a flawless, natural-sounding English statement, paying close attention to punctuation and grammar. This initial stage involves understanding the specific scope of the challenge.
+
+
+**Confirming Task Requirements**
+
+I've clarified the core requirements for this English editing task. The goal is to receive an unspaced, error-ridden string and transform it into a flawless English sentence. I now understand that this involves comprehensive grammar, punctuation, and natural-sounding English. I'm ready to receive the input string and begin the editing process.
+
+
+"""),
+                types.Part.from_text(text="""Understood. I am ready. Please provide the string of text, and I will do my best to transform it into a perfectly grammatical, well-punctuated, and natural-sounding English statement."""),
+            ],
+        ),
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""howtogetprompttoconvertstatementwithoutspaces"""),
+            ],
+        ),
+        types.Content(
+            role="model",
+            parts=[
+                types.Part.from_text(text="""**Decoding the Input**
+
+I've been wrestling with this compact, space-less input. My focus is on unpacking its implied meaning and intentions.  It's a puzzle, but I'm getting closer to a reliable conversion. I'm prioritizing accuracy over speed, aiming to render a clear, understandable statement. The challenge lies in interpreting the user's intent within this condensed structure.
+
+
+**Analyzing the String**
+
+The user's request for space-less conversion is now clearer. I've broken down the input string into potential words. My linguistic analysis suggests a question about prompt functionality. Refining the construction to form a grammatically correct query is next. I am now working on the precise wording to achieve this conversion.
+
+
+"""),
+                types.Part.from_text(text="""How do you get a prompt to convert a statement without spaces?"""),
+            ],
+        ),
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""hellothere
+"""),
+            ],
+        ),
+        types.Content(
+            role="model",
+            parts=[
+                types.Part.from_text(text="""Hello there."""),
+            ],
+        ),
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""mynamesayujya
+"""),
+            ],
+        ),
+        types.Content(
+            role="model",
+            parts=[
+                types.Part.from_text(text="""My name is Sayujya."""),
+            ],
+        ),
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""hixhowmaregfyou"""),
+            ],
+        ),
+        types.Content(
+            role="model",
+            parts=[
+                types.Part.from_text(text="""Hi, how are you?"""),
+            ],
+        ),
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text=recognized_text),
+            ],
+        ),
+    ]
+    tools = [
+        types.Tool(googleSearch=types.GoogleSearch(
+        )),
+    ]
+    generate_content_config = types.GenerateContentConfig(
+        thinking_config = types.ThinkingConfig(
+            thinking_budget=-1,
+        ),
+        tools=tools,
+    )
+
+
+    corrected_text= ""
+
+    for chunk in client.models.generate_content_stream(
+        model=model,
+        contents=contents,
+        config=generate_content_config,
+    ):
+        corrected_text+=chunk.text
+        print(chunk.text, end="")
+    print()
+    return corrected_text.strip()
+
 
 clf = joblib.load("isl_model.pkl")
 encoder = joblib.load("isl_label_encoder.pkl")
@@ -57,6 +190,7 @@ while cap.isOpened():
             recognized_text += current_sign
             current_sign = ""
         hand_present = False
+        
 
     cv2.rectangle(frame, (40, 100), (800, 150), (0, 0, 0), -1)
     cv2.putText(frame, f"Text: {recognized_text}", (50, 140),
@@ -72,3 +206,9 @@ cv2.destroyAllWindows()
 hands.close()
 
 print("Final Recognized Text:", recognized_text)
+
+
+if __name__ == "__main__":
+    converted_text=generate()
+    print(converted_text)
+    speak(converted_text)
