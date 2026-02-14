@@ -67,7 +67,7 @@ cd sign-language-audio
 ### 2️⃣ Install dependencies
 
 ```
-## pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
+pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
 ```
 ### ▶️ Usage
 ## Step 1 — Collect Dataset
@@ -119,6 +119,7 @@ This project is open - source and available under the MIT License.
 Sayujya Tiwari
 
 GitHub: https://github.com/Reaven010
+
 
 
 
