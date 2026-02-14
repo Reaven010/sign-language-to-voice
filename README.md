@@ -83,19 +83,19 @@ python train_model.py
 python predict.py
 ```
 The system will:
--Detect your hand gesture
--Convert it into text
--Speak it out loud
+- Detect your hand gesture
+- Convert it into text
+- Speak it out loud
 
 ---
 
 ## 🎯 Future Improvements
 
--Sentence formation from multiple gestures
--Deep learning model (CNN / LSTM)
--Android app using TensorFlow Lite
--Web app using Streamlit
--Support for the full Indian Sign Language vocabulary
+- Sentence formation from multiple gestures
+- Deep learning model (CNN / LSTM)
+- Android app using TensorFlow Lite
+- Web app using Streamlit
+- Support for the full Indian Sign Language vocabulary
 
 ---
 
@@ -119,6 +119,7 @@ This project is open-source and available under the MIT License.
 Sayujya Tiwari
 
 GitHub: https://github.com/Reaven010
+
 
 
 
