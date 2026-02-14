@@ -77,7 +77,6 @@ python collect.py
 ##Step 2 — Train Model
 ```
 python train_model.py
-
 ```
 ##Step 3 — Run Live Detection
 ```
@@ -108,6 +107,7 @@ The system will:
 -Accessibility tools
 
 ---
+
 ##📜 License
 
 This project is open-source and available under the MIT License.
@@ -119,4 +119,5 @@ This project is open-source and available under the MIT License.
 Sayujya Tiwari
 
 GitHub: https://github.com/Reaven010
+
 
