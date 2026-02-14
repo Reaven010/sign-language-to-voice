@@ -62,8 +62,54 @@ sign-language-audio/
 ```bash
 git clone https://github.com/Reaven010/sign-language-audio.git
 cd sign-language-audio
+```
+---
+###2️⃣ Install dependencies
+
+```
+##pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
+```
+###▶️ Usage
+##Step 1 — Collect Dataset
+```
+python collect.py
+```
+##Step 2 — Train Model
+```
+python train_model.py
+
+```
+##Step 3 — Run Live Detection
+```
+python predict.py
+```
+The system will:
+-Detect your hand gesture
+-Convert it into text
+-Speak it out loud
 
 ---
 
-##pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
+##🎯 Future Improvements
+-Sentence formation from multiple gestures
+-Deep learning model (CNN / LSTM)
+-Android app using TensorFlow Lite
+-Web app using Streamlit
+-Support for full Indian Sign Language vocabulary
+---
+##💡 Use Cases
+-Assistive technology for hearing & speech impaired
+-Smart classrooms
+-Public service kiosks
+-Accessibility tools
 
+---
+##📜 License
+This project is open-source and available under the MIT License.
+---
+
+##👨‍💻 Author
+
+Sayujya Tiwari
+
+GitHub: https://github.com/Reaven010
