@@ -67,18 +67,18 @@ cd sign-language-audio
 ### 2️⃣ Install dependencies
 
 ```
-##pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
+## pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
 ```
 ### ▶️ Usage
-##Step 1 — Collect Dataset
+## Step 1 — Collect Dataset
 ```
 python collect.py
 ```
-##Step 2 — Train Model
+## Step 2 — Train Model
 ```
 python train_model.py
 ```
-##Step 3 — Run Live Detection
+## Step 3 — Run Live Detection
 ```
 python predict.py
 ```
@@ -89,7 +89,7 @@ The system will:
 
 ---
 
-##🎯 Future Improvements
+## 🎯 Future Improvements
 
 -Sentence formation from multiple gestures
 -Deep learning model (CNN / LSTM)
@@ -99,7 +99,7 @@ The system will:
 
 ---
 
-##💡 Use Cases
+## 💡 Use Cases
 
 -Assistive technology for hearing & speech impaired
 -Smart classrooms
@@ -108,17 +108,18 @@ The system will:
 
 ---
 
-##📜 License
+## 📜 License
 
 This project is open-source and available under the MIT License.
 
 ---
 
-##👨‍💻 Author
+## 👨‍💻 Author
 
 Sayujya Tiwari
 
 GitHub: https://github.com/Reaven010
+
 
 
 
