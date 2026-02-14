@@ -34,3 +34,35 @@ The goal is to bridge communication between sign language users and non-signers 
 4. Predict gesture → convert to text  
 5. Convert text → speech output  
 
+
+
+---
+
+## 📁 Project Structure
+
+sign-language-audio/
+│
+├── dataset/ # Collected gesture data
+├── models/ # Trained ML model
+│
+├── collect.py # Dataset collection script
+├── train_model.py # Model training
+├── predict.py # Live gesture detection
+├── tts.py # Text-to-speech module
+│
+└── README.md
+
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Reaven010/sign-language-audio.git
+cd sign-language-audio
+
+---
+
+##pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
