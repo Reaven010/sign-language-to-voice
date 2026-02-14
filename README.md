@@ -91,13 +91,17 @@ The system will:
 ---
 
 ##🎯 Future Improvements
+
 -Sentence formation from multiple gestures
 -Deep learning model (CNN / LSTM)
 -Android app using TensorFlow Lite
 -Web app using Streamlit
--Support for full Indian Sign Language vocabulary
+-Support for the full Indian Sign Language vocabulary
+
 ---
+
 ##💡 Use Cases
+
 -Assistive technology for hearing & speech impaired
 -Smart classrooms
 -Public service kiosks
@@ -105,7 +109,9 @@ The system will:
 
 ---
 ##📜 License
+
 This project is open-source and available under the MIT License.
+
 ---
 
 ##👨‍💻 Author
@@ -113,3 +119,4 @@ This project is open-source and available under the MIT License.
 Sayujya Tiwari
 
 GitHub: https://github.com/Reaven010
+
