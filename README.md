@@ -39,7 +39,7 @@ The goal is to bridge communication between sign language users and non-signers 
 ---
 
 ## 📁 Project Structure
-
+```
 sign-language-audio/
 │
 ├── dataset/ # Collected gesture data
@@ -51,7 +51,7 @@ sign-language-audio/
 ├── tts.py # Text-to-speech module
 │
 └── README.md
-
+```
 
 ---
 
@@ -66,3 +66,4 @@ cd sign-language-audio
 ---
 
 ##pip install opencv-python mediapipe scikit-learn pyttsx3 numpy
+
