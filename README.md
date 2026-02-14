@@ -101,16 +101,16 @@ The system will:
 
 ## 💡 Use Cases
 
--Assistive technology for hearing & speech impaired
--Smart classrooms
--Public service kiosks
--Accessibility tools
+- Assistive technology for hearing & speech impaired
+- Smart classrooms
+- Public service kiosks
+- Accessibility tools
 
 ---
 
 ## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is open - source and available under the MIT License.
 
 ---
 
@@ -119,6 +119,7 @@ This project is open-source and available under the MIT License.
 Sayujya Tiwari
 
 GitHub: https://github.com/Reaven010
+
 
 
 
